@@ -1,0 +1,43 @@
+<div class="product-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <img src="<%- product.Image%>" alt="">
+            </div>
+            <div class="col-8">
+                <h3><%- product.Name%></h3>
+                <p class="item-price">
+                    <% if(product.Discount > 0){%>
+                        <span class="item-price-normal" price="<%- (product.Price - (product.Price*product.Discount/100)) %>"><%- (product.Price - (product.Price*product.Discount/100)).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")%> đ</span>
+                        <span class="item-price-sale"><s><%- product.Price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")%> đ</s></span>
+                    <%}else{%>
+                        <span class="item-price-normal" price="<%- product.Price%>"><%- product.Price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")%> đ</span>
+                    <%}%>
+
+                </p>
+                <div class="item-infor">
+                    <p>Kích cỡ:</p>
+                    <div class="item-size-holder">
+                        <% for (let i = 0; i<product.Size.length; i++){
+                            if(i == 0){%>
+                                <span class="item-size click" id="size_id_<%-product.Size[i]%>"><%-product.Size[i]%></span>
+                            <%}else{%>
+                                <span class="item-size" id="size_id_<%-product.Size[i]%>"><%-product.Size[i]%></span>
+                            <%}
+                        }%>
+                    </div>
+                </div>
+
+                <div class="button-holder">
+                    <button id="btnAddtoCart" product_id="<%- product._id%>">
+                        Thêm vào giỏ hàng
+                    </button>
+
+                    <button id="btnBuyNow" product_id="<%- product._id%>">
+                        Mua ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

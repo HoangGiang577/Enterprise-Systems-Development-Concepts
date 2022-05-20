@@ -1,0 +1,66 @@
+<header>
+    <div class="d-flex justify-content-between nav-header">
+        <div>
+            <span>Chào mừng đến với Gilly Store</span>
+        </div>
+        <div class="btn-header">
+            <a href="https://fb.com">Thông báo</a>
+            <a href="https://fb.com">Trợ giúp</a>
+            <% if(user){%>
+                <a href="/dangxuat">Xin chào, <%- user.Name%></a>
+           <%}else{%>
+                <a href="/dangki">Đăng kí</a>
+                <a href="/dangnhap">Đăng nhập</a>
+            <%}%>
+
+        </div>
+    </div>
+
+    <div class="container-fluid main-header">
+        <div class="row row-center" style="width: 100%">
+            <div class="col-lg-4 logo-holder">
+                <a class="logo-img" href="/">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <div class="search-holder">
+                    <input id="txtSearch" type="text" placeholder="Nhập tên sản phẩm cần tìm ...">
+                    <button id="btnSearch"><i class="far fa-search"></i></button>
+
+                    <div class="search-result">
+                        <p style="color: gray; text-align: center">Không tìm thấy !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart-holder">
+                    <a id="btnCart">
+                        <i class="fal fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                    </a>
+                    <span class="cart-number">5</span>
+
+                    <div class="cart-container">
+                        <div class="cart-normal">
+                            <p>Tổng cộng: <span class="total-price-cart">2.000.000 đ</span></p>
+                            <div class="cart-list">
+                                <div class="cart-item row row-center">
+                                    <span class="item-name col-6">Tên sản phẩm</span>
+                                    <span class="item-price col-4">10.000.000đ</span>
+                                    <span class="item-qty col-1">x10</span>
+                                    <span id="btnDeleteCartItem" class="col-12">Xoá</span>
+                                </div>
+                            </div>
+                            <button class="btn-checkout" onclick="window.location = '/thanhtoan'">Thanh toán</button>
+                        </div>
+                        <div class="cart-empty hidden">
+                            Giỏ hàng hiện đang trống !
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</header>

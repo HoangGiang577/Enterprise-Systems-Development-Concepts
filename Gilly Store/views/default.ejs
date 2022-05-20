@@ -1,0 +1,12 @@
+<%- include('./modules/head') %>
+<body>
+<script>
+    let allproduct = <%- JSON.stringify(allproduct) %>
+</script>
+<%- include('./modules/header') %>
+<main>
+    <%- include('./pages/'+page) %>
+</main>
+<%- include('./modules/footer') %>
+</body>
+</html>

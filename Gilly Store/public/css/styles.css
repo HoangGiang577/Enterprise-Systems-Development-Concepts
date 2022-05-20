@@ -1,0 +1,578 @@
+.row-center {
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background: whitesmoke;
+}
+
+header {
+  background-color: darkorange;
+  width: 100%;
+  height: fit-content;
+}
+header .nav-header {
+  width: 100%;
+  height: fit-content;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: white;
+}
+header .nav-header .btn-header a {
+  color: white;
+  text-decoration: none;
+  padding-left: 5px;
+}
+header .main-header {
+  width: 100%;
+  background-color: darkorange;
+  padding: 10px 0 10px 0;
+}
+header .main-header .logo-holder .logo-img {
+  width: 100%;
+}
+header .main-header .logo-holder .logo-img img {
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+}
+header .main-header .search-holder {
+  width: 100%;
+  position: relative;
+}
+header .main-header .search-holder input {
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 40px 0 10px;
+  height: 35px;
+}
+header .main-header .search-holder input:focus {
+  outline: none;
+}
+header .main-header .search-holder button {
+  background: white;
+  border: none;
+  height: 35px;
+  position: absolute;
+  border-radius: 0 5px 5px 0;
+  right: 0;
+}
+header .main-header .search-holder .search-result {
+  display: none;
+  position: absolute;
+  width: 100%;
+  min-height: 50px;
+  background: white;
+  border: 1px solid darkorange;
+  border-radius: 5px;
+  top: 50px;
+  padding: 5px 10px;
+}
+header .main-header .search-holder .search-result a {
+  display: block;
+  text-decoration: none;
+  color: gray;
+}
+header .main-header .cart-holder {
+  margin: 0 auto;
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+header .main-header .cart-holder a {
+  display: block;
+  padding-top: 2px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+header .main-header .cart-holder a i {
+  font-size: 24px;
+}
+header .main-header .cart-holder a span {
+  display: block;
+  font-size: 14px;
+}
+header .main-header .cart-holder a:hover {
+  color: white;
+}
+header .main-header .cart-holder .cart-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+header .main-header .cart-holder .cart-container {
+  border-radius: 5px;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 300px;
+  min-height: 100px;
+  left: -132px;
+  top: 30px;
+  padding-top: 30px;
+  text-align: right;
+}
+header .main-header .cart-holder .cart-container .cart-normal {
+  border: 1px solid darkorange;
+  border-radius: 5px;
+  padding: 10px;
+  background: white;
+}
+header .main-header .cart-holder .cart-container .cart-normal p {
+  width: 100%;
+  color: gray;
+  font-size: 13px;
+}
+header .main-header .cart-holder .cart-container .cart-normal p span {
+  color: red;
+  font-size: 14px;
+}
+header .main-header .cart-holder .cart-container .cart-normal .cart-list {
+  text-align: left;
+}
+header .main-header .cart-holder .cart-container .cart-normal .cart-list .cart-item {
+  border-bottom: 1px solid lightgray;
+}
+header .main-header .cart-holder .cart-container .cart-normal .cart-list .cart-item .item-name {
+  font-size: 14px;
+}
+header .main-header .cart-holder .cart-container .cart-normal .cart-list .cart-item .item-qty {
+  font-size: 11px;
+  color: gray;
+}
+header .main-header .cart-holder .cart-container .cart-normal .cart-list .cart-item .item-price {
+  font-size: 13px;
+}
+header .main-header .cart-holder .cart-container .cart-normal .cart-list .cart-item .btnDeleteCartItem {
+  font-size: 13px;
+  color: lightgray;
+  text-align: right;
+  cursor: pointer;
+}
+header .main-header .cart-holder .cart-container .cart-normal .btn-checkout {
+  background: #FFE4C4;
+  color: white;
+  height: 35px;
+  width: fit-content;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+header .main-header .cart-holder .cart-container .cart-normal .btn-checkout:hover {
+  background: orange;
+}
+header .main-header .cart-holder .cart-container .cart-empty {
+  border: 1px solid darkorange;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  background: white;
+  color: gray;
+  text-align: center;
+  margin: 0;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+header .main-header .cart-holder:hover .cart-container {
+  display: block;
+}
+
+main .home-container {
+  margin: 50px;
+}
+main .home-container .aside-container {
+  background: white;
+  height: fit-content;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+}
+main .home-container .aside-container h3 {
+  text-align: center;
+}
+main .home-container .aside-container .menu-container {
+  padding: 0 20px;
+}
+main .home-container .aside-container .menu-container a {
+  border-top: 1px solid lightgray;
+  text-transform: uppercase;
+  color: black;
+  font-size: 24px;
+  display: block;
+  text-decoration: none;
+}
+main .home-container .aside-container .menu-container a:hover {
+  color: red;
+}
+main .home-container .filter-container {
+  margin: 0 0 0 10px;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+main .home-container .filter-container span {
+  width: fit-content;
+  color: gray;
+}
+main .home-container .filter-container .btn-filter {
+  height: 35px;
+  width: fit-content;
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: white;
+}
+main .home-container .filter-container .active {
+  background: red;
+  color: white;
+}
+main .home-container .items-container {
+  margin: 0 0 0 10px;
+}
+main .home-container .items-container .col .item {
+  position: relative;
+  border-radius: 5px;
+  background: white;
+}
+main .home-container .items-container .col .item a {
+  color: black;
+  text-decoration: none;
+}
+main .home-container .items-container .col .item a img {
+  width: 100%;
+  height: 220px;
+}
+main .home-container .items-container .col .item a .item-like-tag {
+  position: absolute;
+  top: 10px;
+  left: -4px;
+  background: red;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.8rem;
+  padding: 0 5px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+main .home-container .items-container .col .item a .item-sale-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 13px;
+  color: white;
+  width: 40px;
+  height: 36px;
+  text-align: center;
+  background-color: black;
+  border-top-right-radius: 2px;
+}
+main .home-container .items-container .col .item a .item-sale-tag:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  border-width: 0 20px 4px;
+  border-style: solid;
+  color: black;
+  border-color: transparent currentColor transparent currentColor;
+}
+main .home-container .items-container .col .item a .item-name {
+  padding: 0 10px;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  padding-top: 15px;
+}
+main .home-container .items-container .col .item a .item-price {
+  padding: 0 10px;
+}
+main .home-container .items-container .col .item a .item-price .normal-price {
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+}
+main .home-container .items-container .col .item a .item-price .sale-price-old {
+  color: gray;
+  font-size: 14px;
+  display: inline-block;
+}
+main .home-container .items-container .col .item a .item-infor {
+  padding: 0 10px 10px 10px;
+}
+main .home-container .items-container .col .item a .item-infor i {
+  color: lightgray;
+  font-size: 18px;
+}
+main .home-container .items-container .col .item a .item-infor .click {
+  color: red;
+}
+main .home-container .items-container .col .item a .item-infor span {
+  color: lightgray;
+  font-size: 13px;
+}
+main .home-container .simple-pagination {
+  margin: 0 auto;
+  width: fit-content;
+}
+main .home-container .simple-pagination ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+main .home-container .simple-pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+main .home-container .simple-pagination li a, main .home-container .simple-pagination li span {
+  color: #666;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #EEE;
+  background-color: #FFF;
+  box-shadow: 0 0 10px 0 #EEE;
+}
+main .home-container .simple-pagination .current {
+  color: #FFF;
+  background-color: darkorange;
+  border-color: inherit;
+}
+main .home-container .simple-pagination .prev.current, main .home-container .simple-pagination .next.current {
+  background: lightgray;
+}
+main .product-container {
+  margin: 50px;
+  height: max-content;
+  border-radius: 5px;
+  background: white;
+}
+main .product-container .container-fluid {
+  padding: 50px;
+}
+main .product-container .container-fluid .col-4 img {
+  width: auto;
+  height: 300px;
+}
+main .product-container .container-fluid .col-8 {
+  padding: 40px;
+}
+main .product-container .container-fluid .col-8 h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+main .product-container .container-fluid .col-8 .item-price {
+  text-transform: uppercase;
+  margin-top: 40px;
+  text-align: center;
+}
+main .product-container .container-fluid .col-8 .item-price .item-price-normal {
+  font-size: 32px;
+  color: #c32a2a;
+}
+main .product-container .container-fluid .col-8 .item-price .item-price-sale {
+  margin-left: 40px;
+  font-size: 24px;
+  color: gray;
+}
+main .product-container .container-fluid .col-8 .item-infor p {
+  font-size: 20px;
+}
+main .product-container .container-fluid .col-8 .item-infor .item-size-holder {
+  margin-top: 30px;
+}
+main .product-container .container-fluid .col-8 .item-infor .item-size-holder .item-size {
+  cursor: pointer;
+  border: 1px solid darkorange;
+  padding: 15px;
+  text-align: center;
+  margin-left: 30px;
+  border-radius: 5px;
+  color: gray;
+}
+main .product-container .container-fluid .col-8 .item-infor .item-size-holder .click {
+  background: darkorange;
+  color: white;
+}
+main .product-container .container-fluid .col-8 .button-holder {
+  width: fit-content;
+  margin: 70px auto;
+}
+main .product-container .container-fluid .col-8 .button-holder button {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  border: none;
+  width: 300px;
+}
+main .product-container .container-fluid .col-8 .button-holder #btnAddtoCart {
+  background: blue;
+}
+main .product-container .container-fluid .col-8 .button-holder #btnBuyNow {
+  margin-left: 50px;
+  background: darkorange;
+}
+main .checkout-container {
+  margin: 50px;
+  min-height: 62vh;
+  border-radius: 5px;
+  background: white;
+}
+main .checkout-container .container-fluid {
+  padding: 50px;
+}
+main .checkout-container .container-fluid .col-7 {
+  text-align: center;
+}
+main .checkout-container .container-fluid .col-7 h3 {
+  color: darkorange;
+  text-transform: uppercase;
+}
+main .checkout-container .container-fluid .col-7 input {
+  width: 70%;
+  height: 35px;
+  margin: 20px auto;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid darkorange;
+  display: block;
+}
+main .checkout-container .container-fluid .col-7 input:focus {
+  outline: none;
+}
+main .checkout-container .container-fluid .col-7 textarea {
+  width: 70%;
+  margin: 20px auto;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid darkorange;
+  display: block;
+}
+main .checkout-container .container-fluid .col-7 textarea:focus {
+  outline: none;
+}
+main .checkout-container .container-fluid .col-5 {
+  text-align: center;
+}
+main .checkout-container .container-fluid .col-5 h3 {
+  text-transform: uppercase;
+  color: darkorange;
+}
+main .checkout-container .container-fluid .col-5 .cart-checkout {
+  border-radius: 5px;
+  padding: 10px;
+  background: white;
+}
+main .checkout-container .container-fluid .col-5 .cart-checkout p {
+  width: 100%;
+  color: gray;
+  text-align: right;
+}
+main .checkout-container .container-fluid .col-5 .cart-checkout p span {
+  color: red;
+}
+main .checkout-container .container-fluid .col-5 .cart-checkout .cart-list-checkout {
+  text-align: left;
+}
+main .checkout-container .container-fluid .col-5 .cart-checkout .cart-list-checkout .cart-item-checkout {
+  border-bottom: 1px solid lightgray;
+  padding: 5px 0;
+}
+main .checkout-container .container-fluid .col-5 .cart-checkout .cart-list-checkout .cart-item-checkout .item-qty-checkout {
+  color: gray;
+}
+main .checkout-container .container-fluid .col-12 .button-holder {
+  width: fit-content;
+  margin: 20px auto;
+}
+main .checkout-container .container-fluid .col-12 .button-holder button {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  border: none;
+  width: 300px;
+}
+main .checkout-container .container-fluid .col-12 .button-holder #btnReturn {
+  background: blue;
+}
+main .checkout-container .container-fluid .col-12 .button-holder #btnBuy {
+  margin-left: 50px;
+  background: darkorange;
+}
+main .register-container {
+  margin: 50px;
+  min-height: 62vh;
+  border-radius: 5px;
+  background: white;
+}
+main .register-container .container-fluid {
+  padding: 50px;
+  text-align: center;
+}
+main .register-container .container-fluid h3 {
+  color: darkorange;
+  text-transform: uppercase;
+}
+main .register-container .container-fluid input {
+  width: 70%;
+  height: 35px;
+  margin: 10px auto;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid darkorange;
+  display: block;
+}
+main .register-container .container-fluid input:focus {
+  outline: none;
+}
+main .register-container .container-fluid button {
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  margin: 0 auto;
+  background: orange;
+  color: white;
+}
+main .register-container .container-fluid button:hover {
+  background: darkorange;
+}
+
+footer {
+  background: #FFE4C4;
+  border-top: 5px solid darkorange;
+  height: fit-content;
+  width: 100%;
+  padding: 20px 0;
+}
+footer .footer-col {
+  margin-left: 10px;
+}
+footer .footer-col a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=styles.css.map */

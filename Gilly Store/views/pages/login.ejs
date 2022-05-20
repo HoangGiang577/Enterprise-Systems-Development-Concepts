@@ -1,0 +1,26 @@
+<script>
+    let mess =<%- JSON.stringify( message)%>
+    if (mess.length>0){
+        alert(mess)
+    }
+</script>
+<div class="register-container">
+    <div class="container-fluid">
+        <div class="row">
+            <h3>Đăng Nhập</h3>
+            <% if(message){%>
+                <h2><%- message%></h2>
+            <%}%>
+            <form action="/dangnhap" method="post">
+                <div class="col-12">
+                    <input id="txtEmail" name="username" type="email" placeholder="Nhập dịa chỉ email">
+                    <input id="txtPassword" name="password" type="password" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="col-12">
+                    <button type="submit" id="btnLogin">Đăng nhập</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

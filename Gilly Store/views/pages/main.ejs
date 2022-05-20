@@ -1,0 +1,32 @@
+<script>
+    let product = <%- JSON.stringify(product) %>
+</script>
+<div class="home-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 aside-container">
+                <h3>DANH MỤC</h3>
+                <div class="menu-container">
+                    <% cate.forEach(function (c) {%>
+                        <a href="/danhmuc/<%- c.Slug %>"><%- c.Name%></a>
+                    <%})%>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="filter-container row row-center">
+                    <span>Sắp xếp theo</span>
+                    <button id="btnPop" class="btn-filter btn-pop active">Phổ biến</button>
+                    <button id="btnNew" class="btn-filter btn-new">Mới nhất</button>
+                    <button id="btnBest" class="btn-filter btn-best">Bán chạy nhất</button>
+                    <button id="btnLow" class="btn-filter btn-low">Giá thấp -> cao</button>
+                    <button id="btnHigh" class="btn-filter btn-high">Giá cao -> thấp</button>
+                </div>
+
+                <div class="items-container row row-cols-2 row-cols-sm-2 row-cols-lg-4 g-3">
+                </div>
+
+                <div id="pagination-container" class="justify-content-center"></div>
+            </div>
+        </div>
+    </div>
+</div>

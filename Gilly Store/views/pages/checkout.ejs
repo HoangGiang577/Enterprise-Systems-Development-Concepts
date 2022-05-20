@@ -1,0 +1,41 @@
+<div class="checkout-container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7">
+                <h3>Thông tin đơn hàng</h3>
+                <% if (user){%>
+                    <input type="text" placeholder="Vui lòng nhập họ và tên" id="txtName" value="<%- user.Name%>" required>
+                    <input type="number" placeholder="Vui lòng nhập số điện thoại" id="txtPhone" value="<%- user.Phone%>" required>
+                    <input type="text" placeholder="Vui lòng nhập địa chỉ" id="txtAdd" value="<%- user.Address%>" required>
+                    <textarea rows="5"  type="text" placeholder="Ghi chú đơn hàng" id="txtNote"></textarea>
+                <%}else{%>
+                    <input type="text" placeholder="Vui lòng nhập họ và tên" id="txtName" required>
+                    <input type="number" placeholder="Vui lòng nhập số điện thoại" id="txtPhone" required>
+                    <input type="text" placeholder="Vui lòng nhập địa chỉ" id="txtAdd" required>
+                    <textarea rows="5"  type="text" placeholder="Ghi chú đơn hàng" id="txtNote"></textarea>
+                <%}%>
+
+            </div>
+            <div class="col-5">
+                <h3>Giỏ hàng</h3>
+                <div class="cart-checkout">
+                    <p>Tổng cộng: <span class="total-price-cart">2.000.000 đ</span></p>
+                    <div class="cart-list-checkout">
+                        <div class="cart-item row row-center">
+                            <span class="item-name col-6">Tên sản phẩm</span>
+                            <span class="item-price col-4">10.000.000đ</span>
+                            <span class="item-qty col-1">x10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="button-holder">
+                    <button id="btnReturn">Quay lại</button>
+                    <button id="btnBuy">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
